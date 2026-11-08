@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #EDEAE0;
+}
+
+.lg-display {
+  font-family: 'Fraunces', serif;
+}
+
+.lg-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.lg-btn {
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.lg-btn:active {
+  transform: scale(0.97);
+}
+
+.lg-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.lg-input:focus,
+.lg-select:focus {
+  outline: 2px solid #2F6F5E;
+  outline-offset: 1px;
+}
+
+.lg-row:hover {
+  background: #E4EEE9;
+}
+
+.lg-navitem:focus-visible,
+.lg-btn:focus-visible {
+  outline: 2px solid #C97A2B;
+  outline-offset: 2px;
+}
+
+/* Ruled-paper effect used behind expanded bill receipts */
+.lg-ruled {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    #DDD8C8 27px,
+    #DDD8C8 28px
+  );
+}
+
+/* Perforation strip between a bill's header and its expanded receipt */
+.lg-perforation {
+  background-image: radial-gradient(circle, #EDEAE0 3px, transparent 3.5px);
+  background-size: 14px 100%;
+  background-repeat: repeat-x;
+  height: 8px;
+}
+
+@media (max-width: 640px) {
+  .lg-sidebar {
+    width: 64px !important;
+  }
+  .lg-sidebar .lg-label {
+    display: none !important;
+  }
+}
